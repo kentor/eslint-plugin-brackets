@@ -1,0 +1,6 @@
+---
+env:
+  jest: true
+extends:
+  - kentor
+  - kentor/es6

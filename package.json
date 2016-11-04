@@ -1,0 +1,57 @@
+{
+  "name": "eslint-plugin-brackets",
+  "version": "0.0.1",
+  "description": "ESLint style rules for minimizing diffs with line breaks around brackets",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && babel lib -d dist",
+    "lint": "eslint .",
+    "lint:watch": "esw -w",
+    "prepublish": "npm run build && npm test",
+    "start": "npm run watch",
+    "test": "jest",
+    "test:ci": "npm run lint && npm run test",
+    "test:watch": "jest --watch",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentor/eslint-plugin-brackets"
+  },
+  "author": "Kenneth Chung <ken70r@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentor/eslint-plugin-brackets/issues"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/rules/*.js",
+    "dist/utils.js"
+  ],
+  "homepage": "https://github.com/kentor/eslint-plugin-brackets",
+  "keywords": [
+    "brackets",
+    "eslint",
+    "eslint-plugin",
+    "eslint-plugin-sort",
+    "eslintplugin",
+    "require",
+    "styling"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "eslint": "^3.10.2",
+    "eslint-config-kentor": "^3.9.1",
+    "eslint-watch": "^2.1.14",
+    "jest": "^17.0.3",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.2"
+  },
+  "jest": {
+    "testRegex": "<rootDir>/dist/.*__tests__/.*\\.js$"
+  }
+}
