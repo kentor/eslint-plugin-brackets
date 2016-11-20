@@ -1,0 +1,3 @@
+{
+  "testRegex": "<rootDir>/lib/.*__tests__/.*\\.js$"
+}

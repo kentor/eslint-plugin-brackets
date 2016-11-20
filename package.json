@@ -7,12 +7,11 @@
     "build": "rimraf dist && babel lib -d dist",
     "lint": "eslint .",
     "lint:watch": "esw -w",
-    "prepublish": "npm run build && npm test",
+    "prepublish": "npm run test:ci",
     "start": "npm run watch",
-    "test": "jest",
-    "test:ci": "npm run lint && npm run test",
-    "test:watch": "jest --watch",
-    "watch": "npm run build -- --watch"
+    "test": "jest --config=jest-dev.json",
+    "test:ci": "npm run lint && npm run build && jest --config=jest-build.json",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -40,6 +39,7 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-jest": "^17.0.2",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-preset-es2015-node4": "^2.1.0",
     "eslint": "^3.10.2",
@@ -50,8 +50,5 @@
   },
   "dependencies": {
     "lodash": "^4.17.2"
-  },
-  "jest": {
-    "testRegex": "<rootDir>/dist/.*__tests__/.*\\.js$"
   }
 }

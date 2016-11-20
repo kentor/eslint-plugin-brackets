@@ -202,7 +202,6 @@ Then configure the rules you want to use under the rules section.
 ## Development
 
 - Install packages with `npm install` or `yarn`.
-- Run `npm run watch` to continually transpile source into `dist`
 - Run `npm run test:watch` to continually run the tests
 
 ## License
