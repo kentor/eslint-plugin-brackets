@@ -4,4 +4,13 @@ node_js:
  - 5
  - 6
  - 7
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.yarn-cache
+    - node_modules
+before_install:
+  - npm install -g yarn
+install:
+  - yarn
 script: npm run test:ci
