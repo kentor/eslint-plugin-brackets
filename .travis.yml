@@ -6,11 +6,6 @@ node_js:
  - 7
 cache:
   directories:
-    - $HOME/.npm
-    - $HOME/.yarn-cache
     - node_modules
-before_install:
-  - npm install -g yarn
-install:
-  - yarn
+  yarn: true
 script: npm run test:ci
