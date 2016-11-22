@@ -4,13 +4,14 @@
   "description": "ESLint style rules for minimizing diffs with line breaks around brackets",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rimraf dist && babel lib -d dist",
+    "build": "npm run clean && babel lib -d dist",
+    "clean": "rimraf coverage dist",
     "lint": "eslint .",
     "lint:watch": "esw -w",
-    "prepublish": "npm run test:ci",
-    "start": "npm run watch",
+    "publish": "npm run test:ci && npm publish",
     "test": "jest --config=jest-dev.json",
-    "test:ci": "npm run lint && npm run build && jest --config=jest-build.json",
+    "test:ci": "npm run lint && npm run build && npm run test:dist && npm run test -- --coverage && codecov",
+    "test:dist": "jest --config=jest-dist.json",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
@@ -42,6 +43,7 @@
     "babel-jest": "^17.0.2",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-preset-es2015-node4": "^2.1.0",
+    "codecov": "^1.0.1",
     "eslint": "^3.10.2",
     "eslint-config-kentor": "^3.9.1",
     "eslint-watch": "^2.1.14",

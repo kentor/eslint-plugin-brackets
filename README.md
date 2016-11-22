@@ -1,6 +1,6 @@
 # eslint-plugin-brackets
 
-[![Build Status](https://travis-ci.org/kentor/eslint-plugin-brackets.svg)](https://travis-ci.org/kentor/eslint-plugin-brackets) [![npm](https://img.shields.io/npm/v/eslint-plugin-brackets.svg)](https://www.npmjs.com/package/eslint-plugin-brackets)
+[![Build Status](https://travis-ci.org/kentor/eslint-plugin-brackets.svg)](https://travis-ci.org/kentor/eslint-plugin-brackets) [![codecov](https://codecov.io/gh/kentor/eslint-plugin-brackets/branch/master/graph/badge.svg)](https://codecov.io/gh/kentor/eslint-plugin-brackets) [![npm](https://img.shields.io/npm/v/eslint-plugin-brackets.svg)](https://www.npmjs.com/package/eslint-plugin-brackets)
 
 Opinionated ESLint style rules dealing with line breaks after opening
 brackets and before closing brackets of objects, arrays, conditionals, and
