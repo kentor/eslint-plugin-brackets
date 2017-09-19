@@ -2,7 +2,7 @@
   "name": "eslint-plugin-brackets",
   "version": "0.0.1",
   "description": "ESLint style rules for minimizing diffs with line breaks around brackets",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "npm run clean && babel lib -d dist",
     "clean": "rimraf coverage dist",
