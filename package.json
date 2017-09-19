@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-brackets",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ESLint style rules for minimizing diffs with line breaks around brackets",
   "main": "lib/index.js",
   "scripts": {
