@@ -8,7 +8,7 @@
     "clean": "rimraf coverage dist",
     "lint": "eslint .",
     "lint:watch": "esw -w",
-    "publish": "npm run test:ci && npm publish",
+    "publish": "npm run build && npm publish",
     "test": "jest --config=jest-dev.json",
     "test:ci": "npm run lint && npm run build && npm run test:dist && npm run test -- --coverage && codecov",
     "test:dist": "jest --config=jest-dist.json",
